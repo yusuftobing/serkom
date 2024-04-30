@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2020 at 03:07 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.26
+-- Generation Time: Apr 30, 2024 at 11:15 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -33,14 +32,14 @@ CREATE TABLE `tb_admin` (
   `nm_admin` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_admin`
 --
 
 INSERT INTO `tb_admin` (`id_admin`, `nm_admin`, `username`, `password`) VALUES
-(1, 'Dzulfikar', 'admin', '21232f297a57a5a743894a0e4a801fc3');
+(1, 'Yusuf Tobing', 'admin', '827ccb0eea8a706c4c34a16891f84e7b');
 
 -- --------------------------------------------------------
 
@@ -49,7 +48,7 @@ INSERT INTO `tb_admin` (`id_admin`, `nm_admin`, `username`, `password`) VALUES
 --
 
 CREATE TABLE `tb_pendaftaran` (
-  `id_pendaftaran` char(10) NOT NULL,
+  `id_pendaftaran` char(20) NOT NULL,
   `tgl_daftar` date NOT NULL,
   `th_ajaran` varchar(9) NOT NULL,
   `jurusan` varchar(50) NOT NULL,
@@ -59,17 +58,44 @@ CREATE TABLE `tb_pendaftaran` (
   `jk` enum('Laki-laki','Perempuan') NOT NULL,
   `agama` varchar(15) NOT NULL,
   `almt_peserta` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_pendaftaran`
 --
 
 INSERT INTO `tb_pendaftaran` (`id_pendaftaran`, `tgl_daftar`, `th_ajaran`, `jurusan`, `nm_peserta`, `tmp_lahir`, `tgl_lahir`, `jk`, `agama`, `almt_peserta`) VALUES
-('P202000001', '2020-04-19', '2020/2021', 'Teknik Otomotif', 'iwan', 'maja', '1995-04-01', 'Laki-laki', 'Islam', 'maja'),
-('P202000002', '2020-04-19', '2020/2021', 'Teknik Las', 'deden', 'majalengka', '1996-04-01', 'Laki-laki', 'Islam', 'majalengka'),
-('P202000003', '2020-04-21', '2020/2021', 'Teknik Otomotif', 'nurfadilah', 'majalengka', '1995-04-01', 'Perempuan', 'Islam', 'majalengka'),
-('P202000004', '2020-04-21', '2020/2021', 'Teknik Otomotif', 'fitriani', 'majalengka', '1995-04-01', 'Perempuan', 'Islam', 'maja');
+('P202400001', '2024-04-29', '2024/2025', 'Rekayasa Perangkat Lunak', 'Yusuf Lumban Tobing', 'Medan', '2006-05-12', 'Laki-laki', 'Kristen', 'JL.BINJAI KM 13 JL.BERSAMA'),
+('P202400002', '2024-04-29', '2024/2025', 'Teknik Komputer Dan Jaringan', 'Deswita', 'Medan', '2006-08-02', 'Perempuan', 'Kristen', 'JL.Kampung Lalang km 8'),
+('P202400003', '2024-04-29', '2024/2025', 'Animasi', 'Anton Sinaga', 'Medan', '2024-04-29', 'Laki-laki', 'Kristen', 'JL.Medan Selayang'),
+('P202400004', '2024-04-30', '2024/2025', 'Animasi', 'Tina Ariana', 'Jakarta', '2006-05-11', 'Perempuan', 'Islam', 'Jl.soekarno hatta gg.kenduri'),
+('P202400005', '2024-04-30', '2024/2025', 'Desain Grafis', 'Rina ', 'Medan', '2011-06-30', 'Perempuan', 'Kristen', 'Jl.gatotsubroto jl.medan');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `full_name` varchar(128) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `full_name`, `email`, `password`) VALUES
+(1, 'Aktar', 'aktar@gmail.com', '$2y$10$Jmf9Xk2y8m.fo3c/ZgKmzOrdIRkU05KSGLI0picKLEtr68ll7hjB.'),
+(2, 'yusuf', 'yusuftobing687@gmail.com', '$2y$10$567WTkFgIL6J2Zwc321KfOPOOMcNBJZ/JZ6yNROdF7MHSYsLFRTPu'),
+(3, 'toni', 'Tobing@kasir.com', '$2y$10$N.d7PlP.Hg31qJqempKOkOvhG./yxN87RA5iQl/4HGUm0msLRGzOm'),
+(4, 'lukman', 'yusuflumbantobing@gmail.com', '$2y$10$feQSTMTTtgBcVs5EN6ago.NhX2QnHyPvQYj23ixT/4dPpJ/t6kDMe'),
+(5, 'lia', 'lia@gmail.com', '$2y$10$BFqk2uV24JCeJQ/iLE1UR.HTzSaHR8cbwGFrtYYiCJC5JjtfXhxP.'),
+(6, 'tina', 'tina@gmail.com', '$2y$10$GDuA35yQkbzRJ0Ls7ytVKeoMs0HtvRe2LKCwaOyna1n1udTCK.dn2'),
+(7, 'nov', 'nov@gmail.com', '$2y$10$ifPyIzu/8LdjYRcchOCiTe24aaAM2p7KcrPzeKPHGpfHoJpgn2Irm');
 
 --
 -- Indexes for dumped tables
@@ -88,6 +114,12 @@ ALTER TABLE `tb_pendaftaran`
   ADD PRIMARY KEY (`id_pendaftaran`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -96,6 +128,12 @@ ALTER TABLE `tb_pendaftaran`
 --
 ALTER TABLE `tb_admin`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION["user"])) {
-    header("Location: index.php");
+     header("Location: index.php");
 }
 ?>
 <!DOCTYPE html>
@@ -22,30 +22,30 @@ if (isset($_SESSION["user"])) {
 <body>
      <div class="container">
           <?php
-        if (isset($_POST["login"])) {
-            $email = $_POST["email"];
-            $password = $_POST["password"];
-            require_once "../../koneksi.php";
-            $sql = "SELECT * FROM users WHERE email = '$email'";
-            $result = mysqli_query($conn, $sql);
-            $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
-            if ($user) {
-                if (password_verify($password, $user["password"])) {
-                    session_start();
-                    $_SESSION['status'] = 'login';
-                    echo "<script> alert('Login Success') 
+          if (isset($_POST["login"])) {
+               $email = $_POST["email"];
+               $password = $_POST["password"];
+               require_once "../../koneksi.php";
+               $sql = "SELECT * FROM users WHERE email = '$email'";
+               $result = mysqli_query($conn, $sql);
+               $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+               if ($user) {
+                    if (password_verify($password, $user["password"])) {
+                         session_start();
+                         $_SESSION['status'] = 'login';
+                         echo "<script> alert('Login Success') 
      location.href='../index.php';  
      </script>";
 
-                    die();
-                } else {
-                    echo "<div class='alert alert-danger'>Password does not match</div>";
-                }
-            } else {
-                echo "<div class='alert alert-danger'>Email does not match</div>";
-            }
-        }
-        ?>
+                         die();
+                    } else {
+                         echo "<div class='alert alert-danger'>Password does not match</div>";
+                    }
+               } else {
+                    echo "<div class='alert alert-danger'>Email does not match</div>";
+               }
+          }
+          ?>
           <form action="login.php" method="post">
                <div class="form-group">
                     <input type="email" placeholder="Enter Email:" name="email" class="form-control">

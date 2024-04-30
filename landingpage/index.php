@@ -43,7 +43,7 @@
                                    </li>
                               </ul>
                               <div class="">
-                                   <a href="user/logout.php" class="tombold text-center ">logout </a>
+                                   <a href="user/logout.php" class="btn btn-primary text-center ">logout </a>
                               </div>
                          </div>
                     </div>
@@ -67,11 +67,13 @@
                                         <span class="text-primary fw-bold">Merdeka</span>
                                    </p>
                                    <p class="mb-5 ">
-                                        Jika Belum Memiliki Akun Silahkan Daftar Terlebih Dahulu <a
-                                             href="user/registration.php" class="daftar">Daftar</a>
+                                        Jika Belum Memiliki Akun Silahkan <a href="user/registration.php"
+                                             class="daftar">Daftar</a> Terlebih Dahulu
                                    </p>
-                                   <a href="../index.php" class="tombold text-center mb-3">Pendaftaran Siswa Baru</a>
-                                   <a href="user/login.php" class="tombold text-center px-5">Login </a>
+                                   <a href="../index.php" class="tombold text-center mb-3 me-3">Pendaftaran Siswa
+                                        Baru</a>
+                                   <a href="user/login.php" class="btn btn-outline-primary text-center px-5 py-2">Login
+                                   </a>
                               </div>
                          </div>
                          <div class="col-6 text-end py-2 gambar">
