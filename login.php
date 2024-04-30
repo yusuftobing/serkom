@@ -4,20 +4,20 @@ include 'koneksi.php';
 
 if (isset($_POST['login'])) {
 
-	// cek akun ada apa tidak
-	$cek = mysqli_query($conn, "SELECT * FROM tb_admin
+     // cek akun ada apa tidak
+     $cek = mysqli_query($conn, "SELECT * FROM tb_admin
 			WHERE username = '" . htmlspecialchars($_POST['user']) . "' AND password = '" . MD5(htmlspecialchars($_POST['pass'])) . "' ");
 
-	if (mysqli_num_rows($cek) > 0) {
-		$a = mysqli_fetch_object($cek);
+     if (mysqli_num_rows($cek) > 0) {
+          $a = mysqli_fetch_object($cek);
 
-		$_SESSION['stat_login'] = true;
-		$_SESSION['id'] = $a->id_admin;
-		$_SESSION['nama'] = $a->nm_admin;
-		echo '<script>window.location="beranda.php"</script>';
-	} else {
-		echo '<script>alert("Gagal, username atau password salah")</script>';
-	}
+          $_SESSION['stat_login'] = true;
+          $_SESSION['id'] = $a->id_admin;
+          $_SESSION['nama'] = $a->nm_admin;
+          echo '<script>window.location="beranda.php"</script>';
+     } else {
+          echo '<script>alert("Gagal, username atau password salah")</script>';
+     }
 }
 ?>
 <!DOCTYPE html>
@@ -27,15 +27,16 @@ if (isset($_POST['login'])) {
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <title>PSB Online</title>
-     <link rel="stylesheet" type="text/css" href="css/style.css">
+     <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
      <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+     <link rel="icon" href="landingpage/imglogo/logobuku.png">
 </head>
 
 <body>
 
      <!-- bagian main login -->
-     <div class="container ">
+     <div class="container">
           <div class="row py-5  shadow p-1 mt-4  fs-5" style="border-radius:40px;   background: linear-gradient(
     to right,
     #ffff 0%,
@@ -49,7 +50,7 @@ if (isset($_POST['login'])) {
 
                <div class="col-md-6 d-flex align-items-center justify-content-center" style="border-radius:40px; ">
                     <form action="" method="post" class="py-2">
-                         <h2 class="text-center py-3 fw-bold ">Halaman <span class="text-white">Login</span> </h2>
+                         <h2 class="text-center py-3 fw-bold ">Halaman <span class="text-white">Admin</span> </h2>
                          <div class="row ">
                               <div class="col-md-12 mb-3">
                                    <label class="form-label">Username</label>
@@ -68,7 +69,7 @@ if (isset($_POST['login'])) {
                </div>
           </div>
 
-
+     </div>
 
 
 

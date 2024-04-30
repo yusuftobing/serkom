@@ -1,122 +1,121 @@
 * {
-	margin:0;
-	padding:0;
-	/* font-family: 'Quicksand', sans-serif; */
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Quicksand', sans-serif; */
 }
 body {
-	background-color: #f8f8f8;
+  background-color: #f8f8f8;
+  overflow: hidden;
 }
 .box-formulir {
-	width:50%;
-	margin:100px auto;
+  width: 50%;
+  margin: 100px auto;
 }
 .box {
-	background-color: #fff;
-	border:1px solid #ddd;
-	padding:10px;
-	box-sizing: border-box;
-	margin:5px 0 25px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 5px 0 25px;
 }
 .table-form {
-	width:100%;
+  width: 100%;
 }
 .table-form tr td:nth-child(1) {
-	width: 30%;
+  width: 30%;
 }
 .input-control {
-	padding:5px 10px;
-	font-size: 16px;
-	margin:5px 0;
+  padding: 5px 10px;
+  font-size: 16px;
+  margin: 5px 0;
 }
 .btn-daftar {
-	padding:10px 17px;
-	background-color: #4A99D7;
-	color: #fff;
-	border:none;
-	font-size: 16px;
+  padding: 10px 17px;
+  background-color: #4a99d7;
+  color: #fff;
+  border: none;
+  font-size: 16px;
 }
 .btn-daftar:hover {
-	cursor: pointer;
-	background-color: #4881AE;
+  cursor: pointer;
+  background-color: #4881ae;
 }
 .btn-cetak {
-	display: inline-block;
-	padding:10px 17px;
-	color: #fff;
-	background-color: #FF5733;
-	margin-top: 5px;
-	margin-bottom: 10px;
+  display: inline-block;
+  padding: 10px 17px;
+  color: #fff;
+  background-color: #ff5733;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 .table-data {
-	width: 100%;
-	margin-top: 10px;
+  width: 100%;
+  margin-top: 10px;
 }
 .table-data tr {
-	height: 35px;
+  height: 35px;
 }
 .table-data tr td:nth-child(1) {
-	width:30%;
+  width: 30%;
 }
 .main-login {
-	display: flex;
-	height: 100vh;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 .box-login {
-	width:320px;
-	min-height: 200px;
+  width: 320px;
+  min-height: 200px;
 }
 .box-login h2 {
-	text-align: center;
-	margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .btn-login {
-	padding:7px 20px;
-	background-color: #C70039;
-	color: #fff;
-	border:none;
-	font-size: 16px;
+  padding: 7px 20px;
+  background-color: #c70039;
+  color: #fff;
+  border: none;
+  font-size: 16px;
 }
 .btn-login:hover {
-	cursor: pointer;
-	background-color: #900C3F;
+  cursor: pointer;
+  background-color: #900c3f;
 }
 
 .content {
-	width:90%;
-	padding:10px;
-	box-sizing: border-box;
-	margin:50px auto;
+  width: 90%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 50px auto;
 }
 .table {
-	width:100%;
-	border-collapse: collapse;
-	border:1px solid #ddd;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
 }
 .table tr {
-	height: 30px;
+  height: 30px;
 }
 .table tr td {
-	padding:5px 10px;
+  padding: 5px 10px;
 }
 .table tr td:nth-child(1) {
-	text-align: center;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
-	.box-formulir {
-		width:90%;
-	}
+  .box-formulir {
+    width: 90%;
+  }
 }
 
-.hero{
-	background-image:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8))  ,url(../img/school2.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	width: 100%;
-	height: 100vh;
-
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/school2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
 }
-

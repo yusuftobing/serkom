@@ -71,12 +71,10 @@
   }
 }
 
-
-
 /* registrasi */
 
 .bodyyy {
-    /* background: linear-gradient(
+  /* background: linear-gradient(
     to right,
     #ffffff 0%,
     #ffffff 45%,
@@ -84,7 +82,14 @@
     #9dc0f3 100%
   ); */
   /* background-color: #ebecf1; */
-  border-radius:20px ;
+  border-radius: 20px;
 }
 
 /* end */
+
+.daftar {
+  text-decoration: none;
+}
+.daftar:hover {
+  text-decoration: underline;
+}

@@ -66,9 +66,9 @@
                                         Ayo daftarkan diri anda sebagai peserta didik baru di SMA
                                         <span class="text-primary fw-bold">Merdeka</span>
                                    </p>
-                                   <p class="mb-5">
+                                   <p class="mb-5 ">
                                         Jika Belum Memiliki Akun Silahkan Daftar Terlebih Dahulu <a
-                                             href="user/registration.php">Daftar</a>
+                                             href="user/registration.php" class="daftar">Daftar</a>
                                    </p>
                                    <a href="../index.php" class="tombold text-center mb-3">Pendaftaran Siswa Baru</a>
                                    <a href="user/login.php" class="tombold text-center px-5">Login </a>
@@ -240,7 +240,7 @@
                               <div class="col-md-12">
                                    <label for="pesan" class="form-label">Pesan</label>
                                    <textarea class="form-control" id="pesan"
-                                        placeholder="cth : Terima kasih tim smk merdeka" required></textarea>
+                                        placeholder="cth : Terima kasih tim sma merdeka" required></textarea>
                               </div>
                               <div class="col-12">
                                    <button type="submit" class="btn btn-primary">Kirim</button>

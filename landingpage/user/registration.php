@@ -8,10 +8,12 @@ session_start();
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Registration Form</title>
+     <title>Register</title>
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
      <link rel="stylesheet" href="style.css">
+
+     <link rel="icon" href="../imglogo/logobuku.png">
 </head>
 
 <body>
@@ -58,7 +60,7 @@ session_start();
                     if ($prepareStmt) {
                          mysqli_stmt_bind_param($stmt, "sss", $fullName, $email, $passwordHash);
                          mysqli_stmt_execute($stmt);
-                         echo "<div class='alert alert-success'>You are registered successfully.</div>";
+                         echo "<div class='alert alert-success'>Pendaftaran Akun Berhasil.</div>";
                     } else {
                          die("Something went wrong");
                     }

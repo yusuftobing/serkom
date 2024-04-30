@@ -15,8 +15,11 @@ $p = mysqli_fetch_object($peserta);
      <link rel="stylesheet" type="text/css" href="css/style.css">
      <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+     <link rel="icon" href="landingpage/imglogo/logobuku.png">
+
      <script>
-     window.print();
+          window.print();
      </script>
 </head>
 
